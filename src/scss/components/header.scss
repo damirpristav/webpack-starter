@@ -1,0 +1,54 @@
+@use '../base/variables' as *;
+
+.header {
+  background-color: $bg-color;
+  color: $text-color;
+  text-align: center;
+  padding: 20px 0;
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  &--transparent {
+    background-color: rgba($bg-color, 0.9);
+  }
+
+  &__brand {
+
+    h1 {
+      font-size: 20px;
+
+      a {
+        color: $text-color;
+      }
+    }
+  }
+
+  &__nav {
+
+    ul {
+
+      li {
+        margin-left: 20px;
+
+        a {
+          font-family: $ff-primary-bold;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: $text-color;
+          transition: color .3s ease;
+
+          &:hover,
+          &.active {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
